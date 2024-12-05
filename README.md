@@ -8,12 +8,16 @@ Tutorial de instalação do Ruby, Rails, dependências necessárias e criação 
 ## 🖥 **Instalação**
 
 ### 1. Instale o Ruby e o Rails
-Certifique-se de ter o Ruby e o Rails instalados:
+Certifique-se de ter o Ruby, o Rails, o Git e o Rake instalados:
 
 ```bash
 sudo apt update
+sudo apt upgrade -y
+sudo apt install ruby -y
 sudo apt install ruby-dev build-essential -y
 sudo gem install rails bundler
+sudo apt install git
+sudo gem install rake
 ```
 
 Verifique a instalação:
@@ -21,18 +25,20 @@ Verifique a instalação:
 ```bash
 ruby -v    # Saída: Ruby 3.x.x
 rails -v   # Saída: Rails 7.x.x
+git --version # Saída: git version x.x.x
+rake -V    # Saída: rake, version x.x.x
 ```
 
 ### 2. Crie o projeto:
 
 ```bash
 rails new MeuBlog
-cd MeuBlog
 ```
 
-### 3. Instale as dependências:
+### 3. Instale as dependências DENTRO DA PASTA DO PROJETO:
 
 ```bash
+cd MeuBlog
 bundle install
 ```
 
