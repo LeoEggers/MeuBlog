@@ -1,0 +1,7 @@
+
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+
+<%= link_to 'Editar', edit_post_path(@post), class: 'btn btn-primary' %>
+<%= link_to 'Voltar', posts_path, class: 'btn btn-secondary' %>
+<%= link_to 'Apagar', post_path(@post), method: :delete, data: { confirm: 'Tem certeza que deseja apagar este post?' }, class: 'btn btn-danger' %>
